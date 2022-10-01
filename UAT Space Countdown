@@ -1,0 +1,30 @@
+<div style="background-color:yellow">
+    <div style="color:red">
+         <u>UAT Space Program</u>
+             <p>
+            Today i will show you the blastoff prosess 
+            </p>
+    </div>
+</div> 
+    <br>
+    <br>
+
+<button id="m_btnAlert">
+Interact </button>
+
+    <button>Start</button>
+    <button>Stop</button>
+<br>
+<br>
+    <div style="background-color:black">
+        <div style="color:blanchedalmond"
+    Countdown: <span id="DisplayCountdown"> Ready For Takeoff </span>
+        </div>
+    </div>
+    
+ <script>
+     let x = document.getElementById("DisplayCountdown");
+     runTimer(x);
+ </script>
+</body>
+ </html>
