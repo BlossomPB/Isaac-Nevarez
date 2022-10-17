@@ -1,31 +1,58 @@
-function runTimer(x){
-
-
 alert("Working JS File");
+userName = "[yourUsername] "
+badgeNumber = "[yourBadgeID] "
+// < = Greater Than       > = Less Than
+
+function getUsername(y){
+
+    do{
+        userName = prompt("Please enter your user name");
+    if(userName.length > 19){
+            alert("Please enter a shorter username please.   Current Length: " + userName.length);
+    };
+
+    }while(userName.length > 20);
+    alert("Your Name Is " + userName)
+    y.innerHTML = userName;
+}
+
+function getUserBadgeID(xy){
+    do{
+            badgeNumber = prompt("Please enter your badge number");
+        if(badgeNumber.length > 3){
+            alert("Please enter a valid badge number (Less than 3 charaters)");
+        };
+
+    }while(badgeNumber.length > 4);
+        alert("Your Badge ID Is " + badgeNumber)
+        xy.innerHTML = badgeNumber;
+}
+function runTimer(x){
 
 //displays time
 currTime = 50;
 //time between delay for countdown
 var timeout = 1000;
 //for loop function for runTimer
-for (i = 0; i < 11; i++) {
+
+for (i = 0; i < 11; i++) {    //logic error at ">"
     setTimeout(function(){
         //when time 0 it displays blastoff
         if(currTime == 0){ 
             x.innerHTML = "Blastoff !!";
         }
         //when time is 25 this else if displays halfway point and currTime
-        else if (currTime <25){
-            x.innerHTML = "Warning Less than halfway to launch TimeLeft="+currTime 
+        else if (currTime < 25){
+            x.innerHTML = "Warning Less than halfway to launch TimeLeft= "+currTime 
         }
         // if everything else doesn't fit with the code above this is ran
         else {
             x.innerHTML = currTime
         }
-        currTime = currTime - 5;
+        currTime = currTime - 5;    //Logic error at "=="
         }, timeout);
-        timeout = timeout + 500;
-}
+        timeout = timeout + 500;    //Logic Error at "=="
+    } 
 
 }
 
