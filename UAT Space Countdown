@@ -1,8 +1,21 @@
+ <!DOCTYPE html>
+ <html> 
+     <head>
+ <script src="Helper.js"> </script>
+
+    <script> 
+    // Isaac Nevarez
+    </script> 
+     
+
+    </head>
+<body>  
+     
 <div style="background-color:yellow">
     <div style="color:red">
          <u>UAT Space Program</u>
              <p>
-            Today i will show you the blastoff prosess 
+            Today I will show you the blastoff prosess 
             </p>
     </div>
 </div> 
@@ -18,12 +31,26 @@ Interact </button>
 <br>
     <div style="background-color:black">
         <div style="color:blanchedalmond"
-    Countdown: <span id="DisplayCountdown"> Ready For Takeoff </span>
+            Countdown: <span id="DisplayCountdown"> Ready For Takeoff </span>
         </div>
     </div>
-    
+        <div>
+            <br>
+                Name: <span id="getName">[yourName]</span>
+        </div>
+        <div>
+            <br>
+                Badge ID: <span id="getBadgeNumb">[yourBadgeID]</span>
+
+        </div>
  <script>
-     let x = document.getElementById("DisplayCountdown");
+        let y = document.getElementById("getName");
+    getUsername(y);
+
+        let xy = document.getElementById("getBadgeNumb");
+    getUserBadgeID(xy);
+
+         let x = document.getElementById("DisplayCountdown");
      runTimer(x);
  </script>
 </body>
