@@ -27,16 +27,16 @@ function getUserBadgeID(xy){
         alert("Your Badge ID Is " + badgeNumber)
         xy.innerHTML = badgeNumber;
 }
-function runTimer(x){
-
+//Compartment for timer
+var interID = new Array();
 //displays time
 currTime = 50;
 //time between delay for countdown
 var timeout = 1000;
 //for loop function for runTimer
-
+function runTimer(x){
 for (i = 0; i < 11; i++) {    //logic error at ">"
-    setTimeout(function(){
+    interID[i] = setTimeout(function(){
         //when time 0 it displays blastoff
         if(currTime == 0){ 
             x.innerHTML = "Blastoff !!";
@@ -89,9 +89,21 @@ for (i = 0; i < 11; i++) {    //logic error at ">"
         
         
         //and in the HTML
-        function startButtonClick(){
 
+        var interID = new Array();
+
+        function startButtonClick(){
+            document.getElementById("btnStart").disabled = true;
+            document.getElementById("btnStop").disabled = false;
+            let x = document.getElementById("DisplayCountdown");
+                runTimer(x);
+            
         }
         function stopButtonClick(){
-            
+            document.getElementById("btnStart").disabled = false;
+            document.getElementById("btnStop").disabled = true;
+            for (i = 0; i < 11; i++) { 
+                clearTimeout(interID[i]);
+            }
+
         }
