@@ -2,30 +2,34 @@ alert("Working JS File");
 userName = "[yourUsername] "
 badgeNumber = "[yourBadgeID] "
 // < = Greater Than       > = Less Than
-
+//Function that asks input of user and displays User's Username 
 function getUsername(y){
-
     do{
-        userName = prompt("Please enter your user name");
-    if(userName.length > 19){
+        //Promt that asks for Username
+            userName = prompt("Please enter your user name");
+        //checks with username stays within 20 characters length
+        if(userName.length > 19){
             alert("Please enter a shorter username please.   Current Length: " + userName.length);
     };
-
-    }while(userName.length > 20);
-    alert("Your Name Is " + userName)
-    y.innerHTML = userName;
+        //Displays username 
+        }while(userName.length > 20);
+            alert("Your Name Is " + userName)
+            y.innerHTML = userName;
 }
 
+//Function that asks input of user and displays the ID #
 function getUserBadgeID(xy){
     do{
+        //Promt that asks for badge number
             badgeNumber = prompt("Please enter your badge number");
+        //checks if its less than 3 charaters for a valid ID #
         if(badgeNumber.length > 3){
             alert("Please enter a valid badge number (Less than 3 charaters)");
         };
-
-    }while(badgeNumber.length > 4);
-        alert("Your Badge ID Is " + badgeNumber)
-        xy.innerHTML = badgeNumber;
+        //Displays ID # that will be displayed
+        }while(badgeNumber.length > 4);
+            alert("Your Badge ID Is " + badgeNumber)
+            xy.innerHTML = badgeNumber;
 }
 //Compartment for timer
 var interID = new Array();
@@ -55,7 +59,6 @@ for (i = 0; i < 11; i++) {    //logic error at ">"
     } 
 
 }
-
 
 
     // Dice Game (crops)
