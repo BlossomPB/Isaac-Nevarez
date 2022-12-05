@@ -6,7 +6,12 @@
     <script> 
     // Isaac Nevarez
     </script> 
-     
+
+     <style>
+        table, td{
+            border: 1px solid black;
+        }
+     </style>
 
     </head>
 <body>  
@@ -18,6 +23,9 @@
             Today I will show you the blastoff prosess 
             </p>
     </div>
+    <a href="Index.html"> Index Page </a>
+    <br>
+    <a href="Board.html"> Boards Page </a>
 </div> 
     <br>
     <br>
@@ -35,14 +43,17 @@
             <br>
                 Name: <span id="getName">[yourName]</span>
         </div>
+        
         <div>
             <br>
                 Badge ID: <span id="getBadgeNumb">[yourBadgeID]</span>
+                <br> <br>
               <!-- Audio controls that plays mp3 with on and off switch-->
                 <audio controls autoplay>
                     <source src="us-lab-background.mp3" type = "audio/mpeg"> 
                 </audio>
-            </div>
+        </div>
+
  <script>
     //Calls function getUsername from Helper.js
         let y = document.getElementById("getName");
@@ -52,4 +63,159 @@
         getUserBadgeID(xy);    
  </script>
 </body>
- </html>
+<body onload="startTime()">
+    <div style="text-align: center;">
+    <h2>Time Is: </h2>
+    </div>
+    <div id="txt" style="text-align: center;">
+
+
+        <br>
+        <script>
+            //Current Time Code Clock
+        function startTime() {
+            var today = new Date();
+                let h = today.getHours();   //Check Current Hour
+                let m = today.getMinutes(); //Check Current Minute
+                let s = today.getSeconds(); //Check Current Second
+                
+                    m = checkTime(m);       //
+                    s = checkTime(s);       //
+                
+                //Replaces HTML "txt" with function clock
+                document.getElementById("txt").innerHTML = h + ":" + m + "." + s;
+                
+                //
+                setTimeout(startTime, 1000);
+                
+        }
+    
+        
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i}; //Add zero in front of numbers < 10 
+           return i;
+        }       
+        
+        </script>
+    </div>
+
+    <br><br>
+<div style="text-align: center;">
+<div style="text-align: left;">
+    <img src="UAT_Space.jpg">
+</div>
+    <table id="data">
+        <thead>
+            <th>Data Type:</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            
+            <tr id="time_elapsed">
+                <td>Time Elapsed </td>
+                <td>1210 Seconds</td>
+            </tr>
+
+            <tr id="latitude">
+                <td>Latitude</td>
+                <td>0</td>
+            </tr>
+
+            <tr id="longitude">
+                <td>Longitude</td>
+                <td>0</td>
+            </tr>
+
+            <tr id="GPS_Altitude">
+                <td>GPS Altitude</td>
+                <td>0</td>
+            </tr>
+            
+            <tr id="BMP_Sensor_Altitude">
+                <td>BMP Sensor Altitude</td>
+                <td>30383.04</td>
+            </tr>
+
+            <tr id="BMP_Sensor_Pressure">
+                <td>BMP Sensor Pressure</td>
+                <td>2.34</td>
+            </tr>
+
+            <tr id="BMP_Sensor_Temperature">
+                <td>BMP Sensor Temperature</td>
+                <td>0</td>
+            </tr>
+
+            <tr id="Digital_Sensor_Temperature">
+                <td>Digital Sensor Temperature</td>
+                <td>24</td>
+            </tr>
+
+            <tr id="CSS_Sensor_Termperature">
+                <td>CSS Sensor Temperature</td>
+                <td>32.48</td>
+            </tr>
+
+            <tr id="CSS_Sensor_eCO2">
+                <td>CSS Sensor eCO2</td>
+                <td>422</td>
+            </tr>
+
+            <tr id="CSS_Sensor_TVOC">
+                <td>CSS Sensor TVOC</td>
+                <td>3</td>
+            </tr>
+
+            <tr id="UV">
+                <td>UV</td>
+                <td>6</td>
+            </tr>
+
+            <tr id="Accel_X">
+                <td>Accel X</td>
+                <td>-0.75</td>
+            </tr>
+
+            <tr id="Accel_y">
+                <td>Accel Y</td>
+                <td>-0.77</td>
+            </tr>
+
+            <tr id="Accel_z">
+                <td>Accel Z</td>
+                <td>9.35</td>
+            </tr>
+
+            <tr id="Magnetic_x">
+                <td>Magnetic X</td>
+                <td>-0.08</td>
+            </tr>
+
+            <tr id="Magnetic_y">
+                <td>Magnetic Y</td>
+                <td>0.36</td>
+            </tr>
+
+            <tr id="Magnetic_z">
+                <td>Magnetic Z</td>
+                <td>-0.53</td>
+            </tr>
+
+            <tr id="Gyro_x">
+                <td>Gyro X</td>
+                <td>4.44</td>
+            </tr>
+
+            <tr id="Gyro_y">
+                <td>Gyro Y</td>
+                <td>-0.95</td>
+            </tr>
+
+            <tr id="Gyro_z">
+                <td>Gyro Z</td>
+                <td>1.72</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</html>
