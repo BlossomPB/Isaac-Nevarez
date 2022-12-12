@@ -7,47 +7,46 @@
     // Isaac Nevarez
     </script> 
 
-     <style>
+    <style>
         table, td{
             border: 1px solid black;
         }
-     </style>
+    </style>
 
     </head>
 <body>  
-     
-<div style="background-color:yellow">
+    <div style="text-align: center;">
+        <a href="Default.html">Home</a> &nbsp; &nbsp; | &nbsp; &nbsp;<a href="Index.html">Space Page</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="Board.html">Board Page</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="UAT Space Countdown.html">Countdown</a>
+    </div>    
+    <br> <br> 
+<div style="background-color:yellow; font: 25px/1 Times New Roman; text-align: center;">
     <div style="color:red">
          <u>UAT Space Program</u>
              <p>
             Today I will show you the blastoff prosess 
             </p>
     </div>
-    <a href="Index.html"> Index Page </a>
-    <br>
-    <a href="Board.html"> Boards Page </a>
 </div> 
     <br>
     <br>
-
-<input type="button" id="btnStart" value="Start" onclick="startButtonClick();" />
-<input type="button" id="btnStop" value="Stop" disabled= "true" onclick="stopButtonClick();" />
-<br>
-<br>
-    <div style="background-color:black">
+    <div style="background-color:black; font: 30px/1 Times New Roman; text-align: center;">
         <div style="color:blanchedalmond"
             Countdown: <span id="DisplayCountdown"> Ready For Takeoff </span>
+            <br>
+            <!--Buttons for start and stop for the countdown-->
+            <input type="button" id="btnStart" value="Start" style="background-color: white"  onclick="startButtonClick();" />
+            <input type="button" id="btnStop" value="Stop" disabled= "true"  style="background-color: white" onclick="stopButtonClick();" />
         </div>
     </div>
-        <div>
-            <br>
-                Name: <span id="getName">[yourName]</span>
-        </div>
         
-        <div>
+    </div>
+        <div style="background-color: gray; font: 20px/1 Times New Roman; color: white">
+                Name: <span id="getName">[yourName]</span>
             <br>
                 Badge ID: <span id="getBadgeNumb">[yourBadgeID]</span>
-                <br> <br>
+        </div>
+        <div>
+            <br> <br>
               <!-- Audio controls that plays mp3 with on and off switch-->
                 <audio controls autoplay>
                     <source src="us-lab-background.mp3" type = "audio/mpeg"> 
@@ -89,8 +88,6 @@
                 setTimeout(startTime, 1000);
                 
         }
-    
-        
         function checkTime(i) {
             if (i < 10) {i = "0" + i}; //Add zero in front of numbers < 10 
            return i;
@@ -100,11 +97,12 @@
     </div>
 
     <br><br>
+    <!--Table Script with divs aligning-->
 <div style="text-align: center;">
-<div style="text-align: left;">
-    <img src="UAT_Space.jpg">
+<div style="text-align: center;">
+<img src="UAT_Space.jpg">
 </div>
-    <table id="data">
+<table id="data">
         <thead>
             <th>Data Type:</th>
             <th>Reading</th>
