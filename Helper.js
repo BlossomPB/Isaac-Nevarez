@@ -46,11 +46,12 @@ for (i = 0; i < 11; i++) {    //logic error at ">"
             x.innerHTML = "Blastoff !!";
         }
         //when time is 25 this else if displays halfway point and currTime
-        else if (currTime < 25){
-            x.innerHTML = "Warning Less than halfway to launch TimeLeft= "+currTime 
+        else if (currTime < 25 ){
+            x.innerHTML = "Warning Less than halfway to launch Time Left = "+currTime 
+
         }
         // if everything else doesn't fit with the code above this is ran
-        else {
+        else{
             x.innerHTML = currTime
         }
         currTime = currTime - 5;    //Logic error at "=="
