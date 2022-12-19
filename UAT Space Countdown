@@ -19,16 +19,16 @@
         <a href="Default.html">Home</a> &nbsp; &nbsp; | &nbsp; &nbsp;<a href="Index.html">Space Page</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="Board.html">Board Page</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="UAT Space Countdown.html">Countdown</a>
     </div>    
     <br> <br> 
-<div style="background-color:yellow; font: 25px/1 Times New Roman; text-align: center;">
-    <div style="color:red">
+<div style="background-color: black; font: 35px/1 IMPACT; text-align: center;">
+    <div style="color: blanchedalmond">
+        <br>
          <u>UAT Space Program</u>
              <p>
-            Today I will show you the blastoff prosess 
+            This page will show the countdown for the rocket launch as well as a table with imporant information
             </p>
+            <br><br>
     </div>
 </div> 
-    <br>
-    <br>
     <div style="background-color:black; font: 30px/1 Times New Roman; text-align: center;">
         <div style="color:blanchedalmond"
             Countdown: <span id="DisplayCountdown"> Ready For Takeoff </span>
@@ -36,11 +36,15 @@
             <!--Buttons for start and stop for the countdown-->
             <input type="button" id="btnStart" value="Start" style="background-color: white"  onclick="startButtonClick();" />
             <input type="button" id="btnStop" value="Stop" disabled= "true"  style="background-color: white" onclick="stopButtonClick();" />
+            
+        </div>
+        <div style="background-color: black;">
+            <br><br>
         </div>
     </div>
         
     </div>
-        <div style="background-color: gray; font: 20px/1 Times New Roman; color: white">
+        <div style="background-color: gray; font: 29px/1 Times New Roman; color: white">
                 Name: <span id="getName">[yourName]</span>
             <br>
                 Badge ID: <span id="getBadgeNumb">[yourBadgeID]</span>
@@ -62,11 +66,12 @@
         getUserBadgeID(xy);    
  </script>
 </body>
+<div style="background-color: gray; color: white;">
 <body onload="startTime()">
-    <div style="text-align: center;">
-    <h2>Time Is: </h2>
+    <div style="text-align: center;font: 40px/1 Times New Roman">
+    <h3>Time Is: </h3>
     </div>
-    <div id="txt" style="text-align: center;">
+    <div id="txt" style="text-align: center; font: 35px/1 Impact">
 
 
         <br>
@@ -95,7 +100,7 @@
         
         </script>
     </div>
-
+</div>
     <br><br>
     <!--Table Script with divs aligning-->
 <div style="text-align: center;">
